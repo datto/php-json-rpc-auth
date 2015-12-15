@@ -1,6 +1,9 @@
 {
     "name": "datto/json-rpc-auth",
     "description": "Auth extension for JSON-RPC library",
+    "type": "library",
+    "homepage": "http://www.datto.com",
+    "license": "LGPL-3.0",    
     "authors": [
         {
             "name": "Philipp Heckel",
