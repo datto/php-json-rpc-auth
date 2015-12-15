@@ -1,17 +1,9 @@
-# json-rpc-auth
+# JSON-RPC Auth Extension
 
-This is an authentication and authorization extension for the [php-json-rpc](https://github.com/datto/php-json-rpc) library.
+This is an authentication and authorization extension for the [php-json-rpc](https://github.com/datto/php-json-rpc) library. It provides the ability to authorize JSON-RPC requests before they reach the endpoint. 
 
-Installation
-------------
-```javascript
-"require": {
-  "datto/json-rpc-auth": "~4.0"
-}
-```    
-
-Usage
------
+Examples
+--------
 First write an authentication `Handler`:
 
 ```php
@@ -45,3 +37,23 @@ $authenticator = new Authenticator(array(
 $server = new Server(new Auth\Evaluator(new Simple\Evaluator(), $authenticator));
 echo $server->reply('...');
 ```
+
+Requirements
+------------
+* PHP >= 5.3
+
+Installation
+------------
+```javascript
+"require": {
+  "datto/json-rpc-auth": "~4.0"
+}
+```   
+
+License
+-------
+This package is released under an open-source license: [LGPL-3.0](https://www.gnu.org/licenses/lgpl-3.0.html).
+
+Author
+------
+Written by Chad Kosie and [Philipp C. Heckel](https://github.com/binwiederhier).
